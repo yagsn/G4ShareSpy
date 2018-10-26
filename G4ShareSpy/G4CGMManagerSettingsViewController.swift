@@ -35,7 +35,7 @@ class G4CGMManagerSettingsViewController: UITableViewController {
 
         title = cgmManager.localizedTitle
 
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
 
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.className)
@@ -44,30 +44,26 @@ class G4CGMManagerSettingsViewController: UITableViewController {
 
     // MARK: - UITableViewDataSource
 
-    private enum Section: Int {
+    private enum Section: Int, CaseIterable {
         case latestReading
         case delete
-
-        static let count = 2
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return Section.count
+        return Section.allCases.count
     }
 
-    private enum LatestReadingRow: Int {
+    private enum LatestReadingRow: Int, CaseIterable {
         case glucose
         case date
         case trend
         case state
-
-        static let count = 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section)! {
         case .latestReading:
-            return LatestReadingRow.count
+            return LatestReadingRow.allCases.count
         case .delete:
             return 1
         }
