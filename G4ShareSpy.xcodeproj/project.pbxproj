@@ -52,6 +52,9 @@
 		4DCEF2811D41A2E800724BCD /* MessageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2751D41A2E800724BCD /* MessageHeader.swift */; };
 		4DCEF2821D41A2E800724BCD /* SystemTimeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2761D41A2E800724BCD /* SystemTimeMessage.swift */; };
 		4DCEF2831D41A2E800724BCD /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2771D41A2E800724BCD /* Receiver.swift */; };
+		C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; };
+		C17D3CCB2184D00D003458C8 /* ShareClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C17D3CCC2184D012003458C8 /* LoopKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,20 @@
 			remoteInfo = G4ShareSpy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C17D3CCA2184CFFF003458C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C17D3CCC2184D012003458C8 /* LoopKit.framework in CopyFiles */,
+				C17D3CCB2184D00D003458C8 /* ShareClient.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		43AB513821331BA700B3D58D /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
@@ -135,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DCEF25B1D41A2A200724BCD /* G4ShareSpy.framework in Frameworks */,
+				C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +287,7 @@
 				4DCEF2561D41A2A200724BCD /* Sources */,
 				4DCEF2571D41A2A200724BCD /* Frameworks */,
 				4DCEF2581D41A2A200724BCD /* Resources */,
+				C17D3CCA2184CFFF003458C8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -364,7 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CARTHAGE\" = \"YES\" ]; then\n    echo \"Skipping carthage build because we're already in one\"\nelif [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
+			shellScript = "if [ \"$CARTHAGE\" = \"YES\" ]; then\n    echo \"Skipping carthage build because we're already in one\"\nelif [ -d $PROJECT_DIR/../../../Loop.xcworkspace ]; then \n    echo \"Skipping carthage build because we're in a workspace\"\nelif [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    unset LLVM_TARGET_TRIPLE_SUFFIX\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -631,6 +650,10 @@
 		4DCEF2681D41A2A200724BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = G4ShareSpyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -645,6 +668,10 @@
 		4DCEF2691D41A2A200724BCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = G4ShareSpyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
