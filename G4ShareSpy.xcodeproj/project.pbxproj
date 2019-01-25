@@ -24,7 +24,6 @@
 		43AB513921331BA700B3D58D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB513821331BA700B3D58D /* LocalizedString.swift */; };
 		43AB513C21331BBF00B3D58D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43AB513A21331BBF00B3D58D /* Localizable.strings */; };
 		43BC2C9821157D2A00F9628F /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; };
-		43BC2C9A21157D9300F9628F /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
 		43BC2C9F21157DF300F9628F /* G4CGMManager+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC2C9D21157DF200F9628F /* G4CGMManager+UI.swift */; };
 		43BC2CA021157DF300F9628F /* G4CGMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC2C9E21157DF200F9628F /* G4CGMManager.swift */; };
 		43BC2CA321157E4300F9628F /* ShareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; };
@@ -55,6 +54,10 @@
 		C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; };
 		C17D3CCB2184D00D003458C8 /* ShareClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C17D3CCC2184D012003458C8 /* LoopKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1CE2E8921FBD4A4005C2A3B /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
+		C1CE2E8A21FBD4ED005C2A3B /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
+		C1CE2E8B21FBD540005C2A3B /* LoopKitUI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1CE2E8C21FBD560005C2A3B /* ShareClientUI.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2CA221157E4300F9628F /* ShareClientUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C1CE2E8C21FBD560005C2A3B /* ShareClientUI.framework in CopyFiles */,
+				C1CE2E8B21FBD540005C2A3B /* LoopKitUI.framework in CopyFiles */,
 				C17D3CCC2184D012003458C8 /* LoopKit.framework in CopyFiles */,
 				C17D3CCB2184D00D003458C8 /* ShareClient.framework in CopyFiles */,
 			);
@@ -141,7 +146,7 @@
 			files = (
 				43BC2CA621157E6A00F9628F /* HealthKit.framework in Frameworks */,
 				43BC2C9821157D2A00F9628F /* LoopKit.framework in Frameworks */,
-				43BC2C9A21157D9300F9628F /* LoopKitUI.framework in Frameworks */,
+				C1CE2E8921FBD4A4005C2A3B /* LoopKitUI.framework in Frameworks */,
 				43BC2CA321157E4300F9628F /* ShareClient.framework in Frameworks */,
 				43BC2CA421157E4300F9628F /* ShareClientUI.framework in Frameworks */,
 			);
@@ -152,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DCEF25B1D41A2A200724BCD /* G4ShareSpy.framework in Frameworks */,
+				C1CE2E8A21FBD4ED005C2A3B /* LoopKitUI.framework in Frameworks */,
 				C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +656,8 @@
 		4DCEF2681D41A2A200724BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -662,12 +670,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.G4ShareSpyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		4DCEF2691D41A2A200724BCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -680,6 +691,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.G4ShareSpyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
