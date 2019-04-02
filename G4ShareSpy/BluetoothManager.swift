@@ -56,7 +56,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
 
     // MARK: - GCD Management
 
-    private var managerQueue = DispatchQueue(label: "com.warkmilson.G4ShareSpy.bluetoothManagerQueue", qos: .userInitiated)
+    private var managerQueue = DispatchQueue(label: "com.warkmilson.G4ShareSpy.bluetoothManagerQueue", qos: .unspecified)
 
     override init() {
         super.init()
@@ -102,7 +102,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
             peripheral.delegate = self
             manager.connect(peripheral, options: nil)
         } else {
-            DispatchQueue.global(qos: DispatchQoS.QoSClass.utility).async {
+            DispatchQueue.global(qos: .utility).async {
                 Thread.sleep(forTimeInterval: 10)
                 self.findConnectedReceiver(withRetries: retries - 1)
             }

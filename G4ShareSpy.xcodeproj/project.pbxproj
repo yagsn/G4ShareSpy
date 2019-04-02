@@ -331,7 +331,7 @@
 			};
 			buildConfigurationList = 4DCEF24A1D41A2A200724BCD /* Build configuration list for PBXProject "G4ShareSpy" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
