@@ -154,8 +154,11 @@ class G4CGMManagerSettingsViewController: UITableViewController {
             tableView.deselectRow(at: indexPath, animated: true)
         case .delete:
             let confirmVC = UIAlertController(cgmDeletionHandler: {
-                self.cgmManager.cgmManagerDelegate?.cgmManagerWantsDeletion(self.cgmManager)
-                self.complete()
+                self.cgmManager.notifyDelegateOfDeletion {
+                    DispatchQueue.main.async {
+                        self.complete()
+                    }
+                }
             })
 
             present(confirmVC, animated: true) {
