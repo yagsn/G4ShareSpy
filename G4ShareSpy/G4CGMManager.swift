@@ -25,9 +25,21 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         return [:]
     }
 
-    weak public var cgmManagerDelegate: CGMManagerDelegate? {
-        didSet {
-            shareManager.cgmManagerDelegate = cgmManagerDelegate
+    public var cgmManagerDelegate: CGMManagerDelegate? {
+        get {
+            return shareManager.cgmManagerDelegate
+        }
+        set {
+            shareManager.cgmManagerDelegate = newValue
+        }
+    }
+
+    public var delegateQueue: DispatchQueue! {
+        get {
+            return shareManager.delegateQueue
+        }
+        set {
+            shareManager.delegateQueue = newValue
         }
     }
 
@@ -106,7 +118,9 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         latestReading = latest
 
         // In the event that some of the glucose history was already backfilled from Share, don't overwrite it.
-        let includeAfter = cgmManagerDelegate?.startDateToFilterNewData(for: self)?.addingTimeInterval(TimeInterval(minutes: 1))
+        let includeAfter = shareManager.delegate.call { (delegate) -> Date? in
+            return delegate?.startDateToFilterNewData(for: self)?.addingTimeInterval(TimeInterval(minutes: 1))
+        }
 
         let validGlucose = glucoseHistory.filter({
             $0.isStateValid
@@ -114,11 +128,15 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
             NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, isDisplayOnly: $0.isDisplayOnly, syncIdentifier: String(describing: $0.sequence), device: self.device)
         })
 
-        self.cgmManagerDelegate?.cgmManager(self, didUpdateWith: .newData(validGlucose))
+        shareManager.delegate.notify { (delegate) in
+            delegate?.cgmManager(self, didUpdateWith: .newData(validGlucose))
+        }
     }
 
     public func receiver(_ receiver: Receiver, didError error: Error) {
-        cgmManagerDelegate?.cgmManager(self, didUpdateWith: .error(error))
+        shareManager.delegate.notify { (delegate) in
+            delegate?.cgmManager(self, didUpdateWith: .error(error))
+        }
     }
 
     public func receiver(_ receiver: Receiver, didLogBluetoothEvent event: String) {
