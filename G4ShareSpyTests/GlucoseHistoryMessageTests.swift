@@ -70,8 +70,12 @@ class GlucoseHistoryMessageTests: XCTestCase {
     }
 
     func testBadCRC() {
+        var invalidHexString = historyBytesHex
+        invalidHexString.removeLast()
+        invalidHexString.append("3")
+
         let data = Data(
-            hexadecimalString: historyBytesHex.substring(to: historyBytesHex.characters.index(historyBytesHex.endIndex, offsetBy: -1)) + "3"
+            hexadecimalString: invalidHexString
         )!
 
         XCTAssertNil(GlucoseHistoryMessage(data: data))
