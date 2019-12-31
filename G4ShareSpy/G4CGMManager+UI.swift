@@ -11,12 +11,14 @@ import HealthKit
 
 
 extension G4CGMManager: CGMManagerUI {
-    public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController)? {
+    public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController & CompletionNotifying)? {
         return nil  // We don't require configuration
     }
 
-    public func settingsViewController(for glucoseUnit: HKUnit) -> UIViewController {
-        return G4CGMManagerSettingsViewController(cgmManager: self, glucoseUnit: glucoseUnit)
+    public func settingsViewController(for glucoseUnit: HKUnit) -> (UIViewController & CompletionNotifying) {
+        let settings = G4CGMManagerSettingsViewController(cgmManager: self, glucoseUnit: glucoseUnit)
+        let nav = SettingsNavigationViewController(rootViewController: settings)
+        return nav
     }
 
     public var smallImage: UIImage? {

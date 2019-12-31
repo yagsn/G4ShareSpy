@@ -6,25 +6,10 @@
 	objectVersion = 51;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		43BC2C9121157BD700F9628F /* Cartfile */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 43BC2C9221157BD700F9628F /* Build configuration list for PBXAggregateTarget "Cartfile" */;
-			buildPhases = (
-				43BC2C9521157BE300F9628F /* Build Carthage Dependencies */,
-			);
-			dependencies = (
-			);
-			name = Cartfile;
-			productName = Cartfile;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		43AB513921331BA700B3D58D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB513821331BA700B3D58D /* LocalizedString.swift */; };
 		43AB513C21331BBF00B3D58D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43AB513A21331BBF00B3D58D /* Localizable.strings */; };
 		43BC2C9821157D2A00F9628F /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; };
-		43BC2C9A21157D9300F9628F /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
 		43BC2C9F21157DF300F9628F /* G4CGMManager+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC2C9D21157DF200F9628F /* G4CGMManager+UI.swift */; };
 		43BC2CA021157DF300F9628F /* G4CGMManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC2C9E21157DF200F9628F /* G4CGMManager.swift */; };
 		43BC2CA321157E4300F9628F /* ShareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; };
@@ -52,19 +37,14 @@
 		4DCEF2811D41A2E800724BCD /* MessageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2751D41A2E800724BCD /* MessageHeader.swift */; };
 		4DCEF2821D41A2E800724BCD /* SystemTimeMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2761D41A2E800724BCD /* SystemTimeMessage.swift */; };
 		4DCEF2831D41A2E800724BCD /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2771D41A2E800724BCD /* Receiver.swift */; };
+		A9B6C1DB225ED950002DFCD6 /* ShareClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2CA221157E4300F9628F /* ShareClientUI.framework */; };
+		A9B6C1DC225ED950002DFCD6 /* ShareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; };
 		C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; };
-		C17D3CCB2184D00D003458C8 /* ShareClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C17D3CCC2184D012003458C8 /* LoopKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1CE2E8921FBD4A4005C2A3B /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
+		C1CE2E8A21FBD4ED005C2A3B /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		43BC2C9B21157DBC00F9628F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4DCEF2471D41A2A200724BCD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43BC2C9121157BD700F9628F;
-			remoteInfo = Cartfile;
-		};
 		4DCEF25C1D41A2A200724BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DCEF2471D41A2A200724BCD /* Project object */;
@@ -73,20 +53,6 @@
 			remoteInfo = G4ShareSpy;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C17D3CCA2184CFFF003458C8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C17D3CCC2184D012003458C8 /* LoopKit.framework in CopyFiles */,
-				C17D3CCB2184D00D003458C8 /* ShareClient.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		43AB513821331BA700B3D58D /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
@@ -100,12 +66,12 @@
 		43AB514321331BFF00B3D58D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43AB514421331C0400B3D58D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43AB514521331C0700B3D58D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
-		43BC2C9721157D2900F9628F /* LoopKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopKit.framework; path = Carthage/Build/iOS/LoopKit.framework; sourceTree = "<group>"; };
-		43BC2C9921157D9300F9628F /* LoopKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopKitUI.framework; path = Carthage/Build/iOS/LoopKitUI.framework; sourceTree = "<group>"; };
+		43BC2C9721157D2900F9628F /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43BC2C9921157D9300F9628F /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BC2C9D21157DF200F9628F /* G4CGMManager+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "G4CGMManager+UI.swift"; sourceTree = "<group>"; };
 		43BC2C9E21157DF200F9628F /* G4CGMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = G4CGMManager.swift; sourceTree = "<group>"; };
-		43BC2CA121157E4300F9628F /* ShareClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShareClient.framework; path = Carthage/Build/iOS/ShareClient.framework; sourceTree = "<group>"; };
-		43BC2CA221157E4300F9628F /* ShareClientUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShareClientUI.framework; path = Carthage/Build/iOS/ShareClientUI.framework; sourceTree = "<group>"; };
+		43BC2CA121157E4300F9628F /* ShareClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ShareClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43BC2CA221157E4300F9628F /* ShareClientUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ShareClientUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BC2CA521157E6900F9628F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		43BC2CA721157EA600F9628F /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		43BC2CA921157F1900F9628F /* GlucoseG4+CGMManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GlucoseG4+CGMManager.swift"; sourceTree = "<group>"; };
@@ -132,6 +98,13 @@
 		4DCEF2751D41A2E800724BCD /* MessageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHeader.swift; sourceTree = "<group>"; };
 		4DCEF2761D41A2E800724BCD /* SystemTimeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemTimeMessage.swift; sourceTree = "<group>"; };
 		4DCEF2771D41A2E800724BCD /* Receiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
+		7D9BF13123370A9F005DCFD6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D9BF13223370AA4005DCFD6 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7D9BF13323370AAD005DCFD6 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D9BF13423370AB2005DCFD6 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D9BF13523370ABA005DCFD6 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D9BF13623370AC2005DCFD6 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D9BF13723370AC8005DCFD6 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +114,7 @@
 			files = (
 				43BC2CA621157E6A00F9628F /* HealthKit.framework in Frameworks */,
 				43BC2C9821157D2A00F9628F /* LoopKit.framework in Frameworks */,
-				43BC2C9A21157D9300F9628F /* LoopKitUI.framework in Frameworks */,
+				C1CE2E8921FBD4A4005C2A3B /* LoopKitUI.framework in Frameworks */,
 				43BC2CA321157E4300F9628F /* ShareClient.framework in Frameworks */,
 				43BC2CA421157E4300F9628F /* ShareClientUI.framework in Frameworks */,
 			);
@@ -151,8 +124,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DCEF25B1D41A2A200724BCD /* G4ShareSpy.framework in Frameworks */,
 				C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */,
+				C1CE2E8A21FBD4ED005C2A3B /* LoopKitUI.framework in Frameworks */,
+				A9B6C1DC225ED950002DFCD6 /* ShareClient.framework in Frameworks */,
+				A9B6C1DB225ED950002DFCD6 /* ShareClientUI.framework in Frameworks */,
+				4DCEF25B1D41A2A200724BCD /* G4ShareSpy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +249,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				43BC2C9C21157DBC00F9628F /* PBXTargetDependency */,
 			);
 			name = G4ShareSpy;
 			productName = G4ShareSpy;
@@ -287,7 +262,7 @@
 				4DCEF2561D41A2A200724BCD /* Sources */,
 				4DCEF2571D41A2A200724BCD /* Frameworks */,
 				4DCEF2581D41A2A200724BCD /* Resources */,
-				C17D3CCA2184CFFF003458C8 /* CopyFiles */,
+				A9B6C1DA225ED8ED002DFCD6 /* Copy Frameworks with Carthage */,
 			);
 			buildRules = (
 			);
@@ -309,23 +284,19 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Mark Wilson";
 				TargetAttributes = {
-					43BC2C9121157BD700F9628F = {
-						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
-					};
 					4DCEF24F1D41A2A200724BCD = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					4DCEF2591D41A2A200724BCD = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 4DCEF24A1D41A2A200724BCD /* Build configuration list for PBXProject "G4ShareSpy" */;
 			compatibilityVersion = "Xcode 10.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -339,6 +310,13 @@
 				ru,
 				pl,
 				nb,
+				ja,
+				"pt-BR",
+				sv,
+				da,
+				ro,
+				vi,
+				fi,
 			);
 			mainGroup = 4DCEF2461D41A2A200724BCD;
 			productRefGroup = 4DCEF2511D41A2A200724BCD /* Products */;
@@ -347,7 +325,6 @@
 			targets = (
 				4DCEF24F1D41A2A200724BCD /* G4ShareSpy */,
 				4DCEF2591D41A2A200724BCD /* G4ShareSpyTests */,
-				43BC2C9121157BD700F9628F /* Cartfile */,
 			);
 		};
 /* End PBXProject section */
@@ -371,19 +348,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43BC2C9521157BE300F9628F /* Build Carthage Dependencies */ = {
+		A9B6C1DA225ED8ED002DFCD6 /* Copy Frameworks with Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Build Carthage Dependencies";
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/LoopKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/LoopKitUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/ShareClient.framework",
+				"$(BUILT_PRODUCTS_DIR)/ShareClientUI.framework",
+			);
+			name = "Copy Frameworks with Carthage";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LoopKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LoopKitUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ShareClient.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ShareClientUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$CARTHAGE\" = \"YES\" ]; then\n    echo \"Skipping carthage build because we're already in one\"\nelif [ -d $PROJECT_DIR/../../../Loop.xcworkspace ]; then \n    echo \"Skipping carthage build because we're in a workspace\"\nelif [ -f $PROJECT_DIR/.gitmodules ]; then\n    echo \"Skipping checkout due to presence of .gitmodules file\"\n    if [ $ACTION = \"install\" ]; then\n        echo \"You're installing: Make sure to keep all submodules up-to-date and run carthage build after changes.\"\n    fi\nelse\n    unset LLVM_TARGET_TRIPLE_SUFFIX\n    echo \"Bootstrapping carthage dependencies\"\n    /usr/local/bin/carthage bootstrap --project-directory \"$SRCROOT\" --cache-builds\nfi\n";
+			shellScript = "CARTHAGE_BUILD_DIR=\"${SRCROOT}/Carthage/Build\"\nif [ -n \"${IPHONEOS_DEPLOYMENT_TARGET}\" ]; then\n    CARTHAGE_BUILD_DIR=\"${CARTHAGE_BUILD_DIR}/iOS\"\nelif [ -n \"${WATCHOS_DEPLOYMENT_TARGET}\" ]; then\n    CARTHAGE_BUILD_DIR=\"${CARTHAGE_BUILD_DIR}/watchOS\"\nelse\n    echo \"ERROR: Unexpected deployment target type\"\n    exit 1\nfi\n\nfor SCRIPT_INPUT_FILE in ${!SCRIPT_INPUT_FILE_*}; do\n    CARTHAGE_BUILD_FILE=\"${!SCRIPT_INPUT_FILE/${BUILT_PRODUCTS_DIR}/${CARTHAGE_BUILD_DIR}}\"\n    if [ -e \"${CARTHAGE_BUILD_FILE}\" ]; then\n        if [ -e \"${SCRIPT_INPUT_FILE}\" ]; then\n            echo \"ERROR: Duplicate frameworks found at:\"\n            echo \"  ${SCRIPT_INPUT_FILE}\"\n            echo \"  ${CARTHAGE_BUILD_FILE}\"\n            exit 1\n        fi\n        echo \"Substituting \\\"${CARTHAGE_BUILD_FILE}\\\" for \\\"${!SCRIPT_INPUT_FILE}\\\"\"\n        export ${SCRIPT_INPUT_FILE}=\"${CARTHAGE_BUILD_FILE}\"\n    fi\ndone\n\necho \"Copy Frameworks with Carthage\"\ncarthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -428,11 +417,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		43BC2C9C21157DBC00F9628F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 43BC2C9121157BD700F9628F /* Cartfile */;
-			targetProxy = 43BC2C9B21157DBC00F9628F /* PBXContainerItemProxy */;
-		};
 		4DCEF25D1D41A2A200724BCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4DCEF24F1D41A2A200724BCD /* G4ShareSpy */;
@@ -454,6 +438,13 @@
 				43AB514321331BFF00B3D58D /* ru */,
 				43AB514421331C0400B3D58D /* pl */,
 				43AB514521331C0700B3D58D /* nb */,
+				7D9BF13123370A9F005DCFD6 /* ja */,
+				7D9BF13223370AA4005DCFD6 /* pt-BR */,
+				7D9BF13323370AAD005DCFD6 /* sv */,
+				7D9BF13423370AB2005DCFD6 /* da */,
+				7D9BF13523370ABA005DCFD6 /* ro */,
+				7D9BF13623370AC2005DCFD6 /* vi */,
+				7D9BF13723370AC8005DCFD6 /* fi */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -461,22 +452,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		43BC2C9321157BD700F9628F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		43BC2C9421157BD700F9628F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		4DCEF2621D41A2A200724BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -531,7 +506,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -586,7 +561,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -650,6 +625,8 @@
 		4DCEF2681D41A2A200724BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -662,12 +639,15 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.G4ShareSpyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		4DCEF2691D41A2A200724BCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -680,21 +660,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.warkmilson.G4ShareSpyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43BC2C9221157BD700F9628F /* Build configuration list for PBXAggregateTarget "Cartfile" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				43BC2C9321157BD700F9628F /* Debug */,
-				43BC2C9421157BD700F9628F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4DCEF24A1D41A2A200724BCD /* Build configuration list for PBXProject "G4ShareSpy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
