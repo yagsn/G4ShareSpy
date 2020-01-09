@@ -39,6 +39,9 @@
 		4DCEF2831D41A2E800724BCD /* Receiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEF2771D41A2E800724BCD /* Receiver.swift */; };
 		A9B6C1DB225ED950002DFCD6 /* ShareClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2CA221157E4300F9628F /* ShareClientUI.framework */; };
 		A9B6C1DC225ED950002DFCD6 /* ShareClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2CA121157E4300F9628F /* ShareClient.framework */; };
+		B40BF25423ABCEB400A43CEE /* G4ShareSpyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */; };
+		B40BF25823ABD0C000A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25723ABD0C000A43CEE /* OSLog.swift */; };
+		B40BF25923ABD0DE00A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25723ABD0C000A43CEE /* OSLog.swift */; };
 		C17D3CC92184CFEB003458C8 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9721157D2900F9628F /* LoopKit.framework */; };
 		C1CE2E8921FBD4A4005C2A3B /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
 		C1CE2E8A21FBD4ED005C2A3B /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BC2C9921157D9300F9628F /* LoopKitUI.framework */; };
@@ -46,6 +49,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		4DCEF25C1D41A2A200724BCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DCEF2471D41A2A200724BCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DCEF24F1D41A2A200724BCD;
+			remoteInfo = G4ShareSpy;
+		};
+		B40BF25523ABD02900A43CEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4DCEF2471D41A2A200724BCD /* Project object */;
 			proxyType = 1;
@@ -98,6 +108,11 @@
 		4DCEF2751D41A2E800724BCD /* MessageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHeader.swift; sourceTree = "<group>"; };
 		4DCEF2761D41A2E800724BCD /* SystemTimeMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemTimeMessage.swift; sourceTree = "<group>"; };
 		4DCEF2771D41A2E800724BCD /* Receiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receiver.swift; sourceTree = "<group>"; };
+		B40BF24C23ABCE0400A43CEE /* G4ShareSpyPlugin.loopplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = G4ShareSpyPlugin.loopplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40BF24E23ABCE0400A43CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B40BF25223ABCEB400A43CEE /* G4ShareSpyPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "G4ShareSpyPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
+		B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G4ShareSpyPlugin.swift; sourceTree = "<group>"; };
+		B40BF25723ABD0C000A43CEE /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +140,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B40BF24923ABCE0400A43CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +167,7 @@
 			children = (
 				4DCEF2521D41A2A200724BCD /* G4ShareSpy */,
 				4DCEF25E1D41A2A200724BCD /* G4ShareSpyTests */,
+				B40BF24D23ABCE0400A43CEE /* G4ShareSpyPlugin */,
 				4DCEF2511D41A2A200724BCD /* Products */,
 				43BC2C9621157D2900F9628F /* Frameworks */,
 			);
@@ -155,6 +178,7 @@
 			children = (
 				4DCEF2501D41A2A200724BCD /* G4ShareSpy.framework */,
 				4DCEF25A1D41A2A200724BCD /* G4ShareSpyTests.xctest */,
+				B40BF24C23ABCE0400A43CEE /* G4ShareSpyPlugin.loopplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +201,7 @@
 				4DCEF2711D41A2E800724BCD /* Messages */,
 				4DCEF2771D41A2E800724BCD /* Receiver.swift */,
 				43BC2CB1211634B900F9628F /* UIColor.swift */,
+				B40BF25723ABD0C000A43CEE /* OSLog.swift */,
 			);
 			path = G4ShareSpy;
 			sourceTree = "<group>";
@@ -214,6 +239,16 @@
 				4DCEF2761D41A2E800724BCD /* SystemTimeMessage.swift */,
 			);
 			path = Messages;
+			sourceTree = "<group>";
+		};
+		B40BF24D23ABCE0400A43CEE /* G4ShareSpyPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B40BF24E23ABCE0400A43CEE /* Info.plist */,
+				B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */,
+				B40BF25223ABCEB400A43CEE /* G4ShareSpyPlugin-Bridging-Header.h */,
+			);
+			path = G4ShareSpyPlugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +302,24 @@
 			productReference = 4DCEF25A1D41A2A200724BCD /* G4ShareSpyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B40BF24B23ABCE0400A43CEE /* G4ShareSpyPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40BF25123ABCE0400A43CEE /* Build configuration list for PBXNativeTarget "G4ShareSpyPlugin" */;
+			buildPhases = (
+				B40BF24823ABCE0400A43CEE /* Sources */,
+				B40BF24923ABCE0400A43CEE /* Frameworks */,
+				B40BF24A23ABCE0400A43CEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B40BF25623ABD02900A43CEE /* PBXTargetDependency */,
+			);
+			name = G4ShareSpyPlugin;
+			productName = G4ShareSpyPlugin;
+			productReference = B40BF24C23ABCE0400A43CEE /* G4ShareSpyPlugin.loopplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,6 +337,10 @@
 					4DCEF2591D41A2A200724BCD = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0900;
+					};
+					B40BF24B23ABCE0400A43CEE = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -311,6 +368,7 @@
 			targets = (
 				4DCEF24F1D41A2A200724BCD /* G4ShareSpy */,
 				4DCEF2591D41A2A200724BCD /* G4ShareSpyTests */,
+				B40BF24B23ABCE0400A43CEE /* G4ShareSpyPlugin */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +383,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4DCEF2581D41A2A200724BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B40BF24A23ABCE0400A43CEE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,6 +436,7 @@
 				4DCEF2791D41A2E800724BCD /* BluetoothServices.swift in Sources */,
 				43BC2CA821157EA600F9628F /* TimeInterval.swift in Sources */,
 				4DCEF2781D41A2E800724BCD /* BluetoothManager.swift in Sources */,
+				B40BF25823ABD0C000A43CEE /* OSLog.swift in Sources */,
 				4DCEF27B1D41A2E800724BCD /* NSData.swift in Sources */,
 				4DCEF2801D41A2E800724BCD /* GlucoseHistoryRecord.swift in Sources */,
 				4DCEF2811D41A2E800724BCD /* MessageHeader.swift in Sources */,
@@ -400,6 +466,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B40BF24823ABCE0400A43CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B40BF25923ABD0DE00A43CEE /* OSLog.swift in Sources */,
+				B40BF25423ABCEB400A43CEE /* G4ShareSpyPlugin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -407,6 +482,11 @@
 			isa = PBXTargetDependency;
 			target = 4DCEF24F1D41A2A200724BCD /* G4ShareSpy */;
 			targetProxy = 4DCEF25C1D41A2A200724BCD /* PBXContainerItemProxy */;
+		};
+		B40BF25623ABD02900A43CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DCEF24F1D41A2A200724BCD /* G4ShareSpy */;
+			targetProxy = B40BF25523ABD02900A43CEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -643,6 +723,78 @@
 			};
 			name = Release;
 		};
+		B40BF24F23ABCE0400A43CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = G4ShareSpyPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tidepool.G4ShareSpyPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "G4ShareSpyPlugin/G4ShareSpyPlugin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WRAPPER_EXTENSION = loopplugin;
+			};
+			name = Debug;
+		};
+		B40BF25023ABCE0400A43CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = G4ShareSpyPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.tidepool.G4ShareSpyPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "G4ShareSpyPlugin/G4ShareSpyPlugin-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+				WRAPPER_EXTENSION = loopplugin;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -669,6 +821,15 @@
 			buildConfigurations = (
 				4DCEF2681D41A2A200724BCD /* Debug */,
 				4DCEF2691D41A2A200724BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B40BF25123ABCE0400A43CEE /* Build configuration list for PBXNativeTarget "G4ShareSpyPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B40BF24F23ABCE0400A43CEE /* Debug */,
+				B40BF25023ABCE0400A43CEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
