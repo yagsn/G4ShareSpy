@@ -144,3 +144,15 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         // NSLog("\(#function): \(event)")
     }
 }
+
+// MARK: - DeviceAlertResponder implementation
+extension G4CGMManager {
+    public func acknowledgeAlert(alertIdentifier: DeviceAlert.AlertIdentifier) { }
+}
+
+// MARK: - DeviceAlertSoundVendor implementation
+extension G4CGMManager {
+    public func getSoundBaseURL() -> URL? { return nil }
+    public func getSounds() -> [DeviceAlert.Sound] { return [] }
+}
+
