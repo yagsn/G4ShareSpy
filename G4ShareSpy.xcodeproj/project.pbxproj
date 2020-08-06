@@ -425,6 +425,7 @@
 				"$(BUILT_PRODUCTS_DIR)/LoopKitUI.framework",
 				"$(BUILT_PRODUCTS_DIR)/ShareClient.framework",
 				"$(BUILT_PRODUCTS_DIR)/ShareClientUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/SwiftCharts.framework",
 			);
 			name = "Copy Frameworks with Carthage";
 			outputFileListPaths = (
