@@ -122,6 +122,8 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
             }
         case .resetting, .poweredOff, .unauthorized, .unknown, .unsupported:
             break
+        @unknown default:
+            break
         }
     }
 
