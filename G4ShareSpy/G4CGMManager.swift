@@ -55,8 +55,8 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         return dataIsFresh
     }
 
-    public var sensorState: SensorDisplayable? {
-        return latestReading ?? shareManager.sensorState
+    public var glucoseDisplay: GlucoseDisplayable? {
+        return latestReading ?? shareManager.glucoseDisplay
     }
 
     public var managedDataInterval: TimeInterval? {

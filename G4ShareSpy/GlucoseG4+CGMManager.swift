@@ -22,7 +22,7 @@ extension GlucoseG4: GlucoseValue {
 }
 
 
-extension GlucoseG4: SensorDisplayable {
+extension GlucoseG4: GlucoseDisplayable {
     public var isStateValid: Bool {
         return glucose >= 20
     }
@@ -44,7 +44,7 @@ extension GlucoseG4: SensorDisplayable {
     }
     
     // TODO Placeholder. This functionality will come with LOOP-1311
-    public var glucoseValueType: GlucoseValueType? {
+    public var glucoseRangeCategory: GlucoseRangeCategory? {
         return nil
     }
 }
