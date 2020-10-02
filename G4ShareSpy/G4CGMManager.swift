@@ -64,7 +64,12 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
     }
 
     private(set) var latestReading: GlucoseG4?
-
+    
+    public var hasValidSensorSession: Bool {
+        // No way to detect valid/invalid session here.
+        return true
+    }
+    
     private var dataIsFresh: Bool {
         guard let latestGlucose = latestReading,
             latestGlucose.startDate > Date(timeIntervalSinceNow: .minutes(-4.5)) else {
