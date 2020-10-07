@@ -70,7 +70,7 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         return true
     }
     
-    public var status: CGMManagerStatus {
+    public var cgmStatus: CGMManagerStatus {
         return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
     }
     
