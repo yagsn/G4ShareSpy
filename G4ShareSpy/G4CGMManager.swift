@@ -70,6 +70,10 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         return true
     }
     
+    public var status: CGMManagerStatus {
+        return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
+    }
+    
     private var dataIsFresh: Bool {
         guard let latestGlucose = latestReading,
             latestGlucose.startDate > Date(timeIntervalSinceNow: .minutes(-4.5)) else {
