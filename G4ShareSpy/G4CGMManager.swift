@@ -64,7 +64,16 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
     }
 
     private(set) var latestReading: GlucoseG4?
-
+    
+    public var hasValidSensorSession: Bool {
+        // No way to detect valid/invalid session here.
+        return true
+    }
+    
+    public var cgmStatus: CGMManagerStatus {
+        return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
+    }
+    
     private var dataIsFresh: Bool {
         guard let latestGlucose = latestReading,
             latestGlucose.startDate > Date(timeIntervalSinceNow: .minutes(-4.5)) else {
@@ -74,7 +83,7 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         return true
     }
 
-    public func fetchNewDataIfNeeded(_ completion: @escaping (CGMResult) -> Void) {
+    public func fetchNewDataIfNeeded(_ completion: @escaping (CGMReadingResult) -> Void) {
         // If our last glucose was less than 4.5 minutes ago, don't fetch.
         guard !dataIsFresh else {
             completion(.noData)
@@ -129,13 +138,13 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         })
 
         shareManager.delegate.notify { (delegate) in
-            delegate?.cgmManager(self, didUpdateWith: .newData(validGlucose))
+            delegate?.cgmManager(self, hasNew: .newData(validGlucose))
         }
     }
 
     public func receiver(_ receiver: Receiver, didError error: Error) {
         shareManager.delegate.notify { (delegate) in
-            delegate?.cgmManager(self, didUpdateWith: .error(error))
+            delegate?.cgmManager(self, hasNew: .error(error))
         }
     }
 
