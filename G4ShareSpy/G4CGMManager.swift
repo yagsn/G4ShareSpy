@@ -101,7 +101,7 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
             model: "G4 Share",
             hardwareVersion: nil,
             firmwareVersion: nil,
-            softwareVersion: String(G4ShareSpyVersionNumber),
+            softwareVersion: nil,
             localIdentifier: nil,
             udiDeviceIdentifier: "40386270000048"
         )

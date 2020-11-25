@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ShareClient",
+        "repositoryURL": "https://github.com/LoopKit/dexcom-share-client-swift.git",
+        "state": {
+          "branch": "package-experiment",
+          "revision": "388c70390d7a47a0ed91114b961a0dc4579a8671",
+          "version": null
+        }
+      },
+      {
+        "package": "LoopKit",
+        "repositoryURL": "https://github.com/LoopKit/LoopKit.git",
+        "state": {
+          "branch": "package-experiment",
+          "revision": "d813c44192b573f6adba5954e5b5135fe13cfda8",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftCharts",
+        "repositoryURL": "https://github.com/ps2/SwiftCharts.git",
+        "state": {
+          "branch": "uikit-explicit",
+          "revision": "2919cbcec95ca45fad31262426d6008a28ca7fb5",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
