@@ -11,7 +11,7 @@ import HealthKit
 
 
 public class G4CGMManager: CGMManager, ReceiverDelegate {
-    public static let managerIdentifier: String = "DexG4ShareReceiver"
+    public let managerIdentifier: String = "DexG4ShareReceiver"
 
     init() {
         receiver.delegate = self
@@ -43,7 +43,7 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         }
     }
 
-    public static let localizedTitle = NSLocalizedString("Dexcom G4", comment: "CGM display title")
+    public let localizedTitle = NSLocalizedString("Dexcom G4", comment: "CGM display title")
 
     public let shouldSyncToRemoteService = false
 
