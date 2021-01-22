@@ -12,12 +12,11 @@ import LoopKitUI
 import ShareClient
 import ShareClientUI
 
-
 class G4CGMManagerSettingsViewController: UITableViewController {
 
     public let cgmManager: G4CGMManager
 
-    public let glucoseUnit: HKUnit
+    private var glucoseUnit: HKUnit
 
     public init(cgmManager: G4CGMManager, glucoseUnit: HKUnit) {
         self.cgmManager = cgmManager
@@ -208,3 +207,9 @@ private extension UIAlertController {
     }
 }
 
+extension G4CGMManagerSettingsViewController: PreferredGlucoseUnitObserver {
+    func preferredGlucoseUnitDidChange(to preferredGlucoseUnit: HKUnit) {
+        self.glucoseUnit = preferredGlucoseUnit
+        tableView.reloadData()
+    }
+}
