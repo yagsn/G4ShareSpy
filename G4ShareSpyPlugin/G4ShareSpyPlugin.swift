@@ -6,18 +6,12 @@
 //  Copyright © 2019 Mark Wilson. All rights reserved.
 //
 
-import Foundation
+import os.log
 import LoopKitUI
 import G4ShareSpy
-import os.log
 
-class G4ShareSpyPlugin: NSObject, LoopUIPlugin {
-    
+class G4ShareSpyPlugin: NSObject, CGMManagerUIPlugin {    
     private let log = OSLog(category: "G4ShareSpyPlugin")
-    
-    public var pumpManagerType: PumpManagerUI.Type? {
-        return nil
-    }
     
     public var cgmManagerType: CGMManagerUI.Type? {
         return G4CGMManager.self
@@ -25,6 +19,6 @@ class G4ShareSpyPlugin: NSObject, LoopUIPlugin {
     
     override init() {
         super.init()
-        log.default("G4ShareSpyPlugin Instantiated")
+        log.default("Instantiated")
     }
 }

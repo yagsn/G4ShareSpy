@@ -45,6 +45,8 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
 
     public let localizedTitle = NSLocalizedString("Dexcom G4", comment: "CGM display title")
 
+    public let isOnboarded = true   // No distinction between created and onboarded
+
     public let shouldSyncToRemoteService = false
 
     let shareManager = ShareClientManager()
