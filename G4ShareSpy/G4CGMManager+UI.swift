@@ -16,8 +16,8 @@ extension G4CGMManager: CGMManagerUI {
         return .createdAndOnboarded(G4CGMManager())
     }
 
-    public func settingsViewController(for preferredGlucoseUnit: HKUnit, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & PreferredGlucoseUnitObserver & CompletionNotifying) {
-        let settings = G4CGMManagerSettingsViewController(cgmManager: self, glucoseUnit: preferredGlucoseUnit)
+    public func settingsViewController(for displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & CompletionNotifying) {
+        let settings = G4CGMManagerSettingsViewController(cgmManager: self, displayGlucoseUnitObservable: displayGlucoseUnitObservable)
         let nav = CGMManagerSettingsNavigationViewController(rootViewController: settings)
         return nav
     }
