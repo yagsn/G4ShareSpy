@@ -6,24 +6,34 @@
 //
 
 import UIKit
+import Combine
 import HealthKit
 import LoopKit
 import LoopKitUI
 import ShareClient
 import ShareClientUI
 
-
 class G4CGMManagerSettingsViewController: UITableViewController {
 
     public let cgmManager: G4CGMManager
 
-    public let glucoseUnit: HKUnit
+    private let displayGlucoseUnitObservable: DisplayGlucoseUnitObservable
 
-    public init(cgmManager: G4CGMManager, glucoseUnit: HKUnit) {
+    private lazy var cancellables = Set<AnyCancellable>()
+
+    private var glucoseUnit: HKUnit {
+        displayGlucoseUnitObservable.displayGlucoseUnit
+    }
+
+    public init(cgmManager: G4CGMManager, displayGlucoseUnitObservable: DisplayGlucoseUnitObservable) {
         self.cgmManager = cgmManager
-        self.glucoseUnit = glucoseUnit
+        self.displayGlucoseUnitObservable = displayGlucoseUnitObservable
 
         super.init(style: .grouped)
+
+        displayGlucoseUnitObservable.$displayGlucoseUnit
+            .sink { [weak self] _ in self?.tableView.reloadData() }
+            .store(in: &cancellables)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -207,4 +217,3 @@ private extension UIAlertController {
         addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
     }
 }
-
