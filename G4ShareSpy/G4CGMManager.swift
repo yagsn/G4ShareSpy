@@ -11,7 +11,7 @@ import HealthKit
 
 
 public class G4CGMManager: CGMManager, ReceiverDelegate {
-    public static let managerIdentifier: String = "DexG4ShareReceiver"
+    public let managerIdentifier: String = "DexG4ShareReceiver"
 
     init() {
         receiver.delegate = self
@@ -43,7 +43,9 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         }
     }
 
-    public static let localizedTitle = NSLocalizedString("Dexcom G4", comment: "CGM display title")
+    public let localizedTitle = NSLocalizedString("Dexcom G4", comment: "CGM display title")
+
+    public let isOnboarded = true   // No distinction between created and onboarded
 
     public let shouldSyncToRemoteService = false
 
@@ -70,7 +72,7 @@ public class G4CGMManager: CGMManager, ReceiverDelegate {
         return true
     }
     
-    public var cgmStatus: CGMManagerStatus {
+    public var cgmManagerStatus: CGMManagerStatus {
         return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
     }
     
