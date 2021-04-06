@@ -37,6 +37,7 @@
 		B40BF25423ABCEB400A43CEE /* G4ShareSpyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */; };
 		B40BF25823ABD0C000A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25723ABD0C000A43CEE /* OSLog.swift */; };
 		B40BF25923ABD0DE00A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25723ABD0C000A43CEE /* OSLog.swift */; };
+		C16883D0261CC3110061EA78 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C16883CF261CC3110061EA78 /* LoopKit.framework */; };
 		C1EC922C261A4C0500002B1A /* ExampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EC922B261A4C0500002B1A /* ExampleAppApp.swift */; };
 		C1EC922E261A4C0500002B1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EC922D261A4C0500002B1A /* ContentView.swift */; };
 		C1EC9230261A4C0600002B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EC922F261A4C0600002B1A /* Assets.xcassets */; };
@@ -132,6 +133,7 @@
 		B40BF25223ABCEB400A43CEE /* G4ShareSpyPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "G4ShareSpyPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G4ShareSpyPlugin.swift; sourceTree = "<group>"; };
 		B40BF25723ABD0C000A43CEE /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		C16883CF261CC3110061EA78 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EC9229261A4C0500002B1A /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EC922B261A4C0500002B1A /* ExampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppApp.swift; sourceTree = "<group>"; };
 		C1EC922D261A4C0500002B1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16883D0261CC3110061EA78 /* LoopKit.framework in Frameworks */,
 				43BC2CA621157E6A00F9628F /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +180,7 @@
 		43BC2C9621157D2900F9628F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C16883CF261CC3110061EA78 /* LoopKit.framework */,
 				43BC2CA521157E6900F9628F /* HealthKit.framework */,
 			);
 			name = Frameworks;
