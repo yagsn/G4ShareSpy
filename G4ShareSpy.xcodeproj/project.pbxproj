@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,24 +37,10 @@
 		B40BF25423ABCEB400A43CEE /* G4ShareSpyPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */; };
 		B40BF25823ABD0C000A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25723ABD0C000A43CEE /* OSLog.swift */; };
 		B40BF25923ABD0DE00A43CEE /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40BF25723ABD0C000A43CEE /* OSLog.swift */; };
-		C11DA7C6261A419B009C92F0 /* ShareClientUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C2261A419B009C92F0 /* ShareClientUI.xcframework */; };
-		C11DA7C7261A419B009C92F0 /* LoopKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C3261A419B009C92F0 /* LoopKit.xcframework */; };
-		C11DA7C8261A419B009C92F0 /* LoopKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C4261A419B009C92F0 /* LoopKitUI.xcframework */; };
-		C11DA7C9261A419B009C92F0 /* ShareClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C5261A419B009C92F0 /* ShareClient.xcframework */; };
 		C1EC922C261A4C0500002B1A /* ExampleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EC922B261A4C0500002B1A /* ExampleAppApp.swift */; };
 		C1EC922E261A4C0500002B1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EC922D261A4C0500002B1A /* ContentView.swift */; };
 		C1EC9230261A4C0600002B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EC922F261A4C0600002B1A /* Assets.xcassets */; };
 		C1EC9233261A4C0600002B1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EC9232261A4C0600002B1A /* Preview Assets.xcassets */; };
-		C1EC9256261A4C5E00002B1A /* LoopKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C3261A419B009C92F0 /* LoopKit.xcframework */; };
-		C1EC9257261A4C5E00002B1A /* LoopKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C3261A419B009C92F0 /* LoopKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1EC925C261A4C6000002B1A /* LoopKitUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C4261A419B009C92F0 /* LoopKitUI.xcframework */; };
-		C1EC925D261A4C6000002B1A /* LoopKitUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C4261A419B009C92F0 /* LoopKitUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1EC9261261A4C6100002B1A /* ShareClient.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C5261A419B009C92F0 /* ShareClient.xcframework */; };
-		C1EC9262261A4C6100002B1A /* ShareClient.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C5261A419B009C92F0 /* ShareClient.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1EC9266261A4C6200002B1A /* ShareClientUI.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C2261A419B009C92F0 /* ShareClientUI.xcframework */; };
-		C1EC9267261A4C6200002B1A /* ShareClientUI.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C11DA7C2261A419B009C92F0 /* ShareClientUI.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C1EC926B261A4C6300002B1A /* SwiftCharts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EC9250261A4C5900002B1A /* SwiftCharts.xcframework */; };
-		C1EC926C261A4C6300002B1A /* SwiftCharts.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1EC9250261A4C5900002B1A /* SwiftCharts.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,11 +74,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C1EC926C261A4C6300002B1A /* SwiftCharts.xcframework in Embed Frameworks */,
-				C1EC9267261A4C6200002B1A /* ShareClientUI.xcframework in Embed Frameworks */,
-				C1EC925D261A4C6000002B1A /* LoopKitUI.xcframework in Embed Frameworks */,
-				C1EC9257261A4C5E00002B1A /* LoopKit.xcframework in Embed Frameworks */,
-				C1EC9262261A4C6100002B1A /* ShareClient.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,17 +132,12 @@
 		B40BF25223ABCEB400A43CEE /* G4ShareSpyPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "G4ShareSpyPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		B40BF25323ABCEB400A43CEE /* G4ShareSpyPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G4ShareSpyPlugin.swift; sourceTree = "<group>"; };
 		B40BF25723ABD0C000A43CEE /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
-		C11DA7C2261A419B009C92F0 /* ShareClientUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShareClientUI.xcframework; path = Carthage/Build/ShareClientUI.xcframework; sourceTree = "<group>"; };
-		C11DA7C3261A419B009C92F0 /* LoopKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LoopKit.xcframework; path = Carthage/Build/LoopKit.xcframework; sourceTree = "<group>"; };
-		C11DA7C4261A419B009C92F0 /* LoopKitUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = LoopKitUI.xcframework; path = Carthage/Build/LoopKitUI.xcframework; sourceTree = "<group>"; };
-		C11DA7C5261A419B009C92F0 /* ShareClient.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ShareClient.xcframework; path = Carthage/Build/ShareClient.xcframework; sourceTree = "<group>"; };
 		C1EC9229261A4C0500002B1A /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EC922B261A4C0500002B1A /* ExampleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppApp.swift; sourceTree = "<group>"; };
 		C1EC922D261A4C0500002B1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C1EC922F261A4C0600002B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1EC9232261A4C0600002B1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1EC9234261A4C0600002B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1EC9250261A4C5900002B1A /* SwiftCharts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftCharts.xcframework; path = Carthage/Build/SwiftCharts.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,10 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C11DA7C6261A419B009C92F0 /* ShareClientUI.xcframework in Frameworks */,
-				C11DA7C7261A419B009C92F0 /* LoopKit.xcframework in Frameworks */,
-				C11DA7C8261A419B009C92F0 /* LoopKitUI.xcframework in Frameworks */,
-				C11DA7C9261A419B009C92F0 /* ShareClient.xcframework in Frameworks */,
 				43BC2CA621157E6A00F9628F /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,11 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1EC926B261A4C6300002B1A /* SwiftCharts.xcframework in Frameworks */,
-				C1EC9266261A4C6200002B1A /* ShareClientUI.xcframework in Frameworks */,
-				C1EC9261261A4C6100002B1A /* ShareClient.xcframework in Frameworks */,
-				C1EC9256261A4C5E00002B1A /* LoopKit.xcframework in Frameworks */,
-				C1EC925C261A4C6000002B1A /* LoopKitUI.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,11 +177,6 @@
 		43BC2C9621157D2900F9628F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1EC9250261A4C5900002B1A /* SwiftCharts.xcframework */,
-				C11DA7C3261A419B009C92F0 /* LoopKit.xcframework */,
-				C11DA7C4261A419B009C92F0 /* LoopKitUI.xcframework */,
-				C11DA7C5261A419B009C92F0 /* ShareClient.xcframework */,
-				C11DA7C2261A419B009C92F0 /* ShareClientUI.xcframework */,
 				43BC2CA521157E6900F9628F /* HealthKit.framework */,
 			);
 			name = Frameworks;
