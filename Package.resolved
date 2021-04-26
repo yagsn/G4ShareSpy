@@ -5,8 +5,8 @@
         "package": "ShareClient",
         "repositoryURL": "https://github.com/LoopKit/dexcom-share-client-swift.git",
         "state": {
-          "branch": "package-experiment",
-          "revision": "388c70390d7a47a0ed91114b961a0dc4579a8671",
+          "branch": "package-experiment2",
+          "revision": "f71d1735efb15272f277d5841d9ae6c6bb87918a",
           "version": null
         }
       },
@@ -14,8 +14,8 @@
         "package": "LoopKit",
         "repositoryURL": "https://github.com/LoopKit/LoopKit.git",
         "state": {
-          "branch": "package-experiment",
-          "revision": "d813c44192b573f6adba5954e5b5135fe13cfda8",
+          "branch": "package-experiment2",
+          "revision": "21a49a163614253b48c74aa803a6cb7f42adf4d1",
           "version": null
         }
       },

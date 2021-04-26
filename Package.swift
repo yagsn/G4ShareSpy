@@ -13,8 +13,8 @@ let package = Package(
         .library(name: "G4ShareSpyPlugin",targets: ["G4ShareSpyPlugin"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/LoopKit/LoopKit.git", .branch("package-experiment")),
-        .package(name: "ShareClient", url: "https://github.com/LoopKit/dexcom-share-client-swift.git", .branch("package-experiment"))
+        .package(url: "https://github.com/LoopKit/LoopKit.git", .branch("package-experiment2")),
+        .package(name: "ShareClient", url: "https://github.com/LoopKit/dexcom-share-client-swift.git", .branch("package-experiment2"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
