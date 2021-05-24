@@ -12,6 +12,10 @@ import HealthKit
 
 
 extension G4CGMManager: CGMManagerUI {
+    public static var onboardingImage: UIImage? {
+        return nil
+    }
+
     public static func setupViewController(bluetoothProvider: BluetoothProvider, displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, colorPalette: LoopUIColorPalette) -> SetupUIResult<CGMManagerViewController, CGMManagerUI> {
         return .createdAndOnboarded(G4CGMManager())
     }
